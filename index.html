@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Firefox OS, A Web é a Plataforma!</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/firefoxos.css" id="theme">
+		
+		<script>
+		
+		// Todo
+		//		- Adicionar Marketplace + própria marketplace
+		//		- IndexedDB
+		//		- Aparelhos com FirefoxOS
+		//		- Links Comunidade
+		
+		
+		</script>
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		
+			.partes .box {
+				background:rgba(0,0,0,0.4);
+				box-shadow:0 0 3px rgba(0,0,0,0.6);
+				padding:10px;
+			}
+			.partes .box:not(:last-of-type) { 
+				margin-bottom:10px; 
+			}
+			.partes .box h2 {
+				font-size:1.6em;
+			}
+			
+		</style>
+
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="img/bg.png">
+					<h1>Firefox OS</h1>
+					<h3>A Web é a Plataforma!</h3>
+					<p>
+						<small>Comunidade Mozilla Brasil - <a href="http://mozillabrasil.org.br/">mozillabrasil.org.br</a></small>
+					</p>
+				</section>
+				
+				<section>
+					
+					<h1>A Mozilla é...</h1>
+					<blockquote>uma comunidade global de pessoas que acreditam que abertura, inovação, e oportunidade são fatores fundamentais para o bem estar da Internet.</blockquote>
+					
+					<aside class="notes">
+						- Somos programadores, advogados, cientistas, designers, estudantes...</br>
+						- Somos pessoas comuns que lutam para garantir a sua liberdade e direito de expressão.
+					</aside>
+					
+				</section>
+				
+				<section>
+					
+					<img src="img/fox.png">
+					<h1>Firefox OS</h1>
+
+				</section>
+				
+				<section>
+					
+					<div class="partes">
+						<div class="gaia box">
+							<h2>Gaia</h2>
+							<p>Coleção de aplicativos web que fazem a UI</p>
+						</div>
+						<div class="gecko box fragment">
+							<h2>Gecko</h2>
+							<p>Motor de JS e Renderização de HTML, APIs amigáveis para acesso ao hardware</p>
+						</div>
+						<div class="gonk box fragment">
+							<h2>Gonk</h2>
+							<p>Kernel Linux, Device drivers e camada de abstração do hardware</p>
+						</div>
+					</div>
+
+					<aside class="notes">
+						- Kernel baseado no AOSP (Android Open Source Project)
+					</aside>
+
+				</section>
+				
+				<section>
+					
+					<h3>Ferramentas de</h3>
+					<h1>desenvolvimento</h1>
+					<img src="img/devtools.png">
+					
+				</section>
+				
+				<section>
+				
+					<h3>Firefox OS</h3><h1>Simulator</h1>
+					<img src="img/simulator.png">
+					
+				</section>
+				
+				<section>
+				
+					<h1>manifest.json</h1>
+						<pre><code data-trim contenteditable>
+{
+	"name": "Meu App",
+	"description": "Minha descrição",
+	"launch_path": "/",
+	"icons": { "128": "/img/icon-128.png" },
+	"developer": {
+	        "name": "Meu nome ou organização",
+	        "url": "http://sua-pagina-aqui.org"
+	}
+}
+						</code></pre>
+				</section>
+				
+				<section>
+					
+					<div class="partes">
+						<div class="hospedados box">
+							<h2>Apps hospedados</h2>
+							<p>Armazenada no seu servidor, fácil de atualizar, acesso ao hardware limitado.</p>
+						</div>
+						<div class="privilegiados box fragment">
+							<h2>Apps privilegiados</h2>
+							<p>Verificada pelo Marketplace, utiliza uma Politica de Segurança de Conteúdo, armazenada em um servidor.</p>
+						</div>
+						<div class="certificados box fragment">
+							<h2>Apps certificados</h2>
+							<p>Parte do sistema operacional, apenas para a Mozilla e parceiros.</p>
+						</div>
+					</div>
+
+					<aside class="notes">
+						- Kernel baseado no AOSP (Android Open Source Project)
+					</aside>
+
+				</section>
+				
+				<section>
+				
+					<h1>Demo</h1>
+					<h3>Fazendo uma ligação</h3>
+					<pre><code data-trim contenteditable>
+					
+var call = new MozActivity({
+	name: "dial",
+	data: {
+	        number: "26091048"
+	}
+});
+      
+					
+					</code></pre>
+				
+				</section>
+				
+				<section>
+				
+					<h1>Demo</h1>
+					<h3>Pegando uma imagem</h3>
+					<pre><code data-trim contenteditable>
+					
+var getphoto = new MozActivity({
+	name: "pick",
+	data: {
+	        type: ["image/png", "image/jpg", "image/jpeg"]
+	}
+});
+  
+      
+					
+					</code></pre>
+					
+				</section>
+				
+				<section>
+				
+					<h1>Demo</h1>
+					<h3>Pegando uma imagem - callback</h3>
+					<pre><code data-trim contenteditable>
+					
+getphoto.onsuccess = function () {
+	var img = document.createElement("img");
+	if (this.result.blob.type.indexOf("image") != -1) {
+	        img.src = window.URL.createObjectURL(this.result.blob);
+	}
+};
+getphoto.onerror = function () {
+	// erro!
+};
+
+					
+					</code></pre>
+					
+				</section>
+				
+				<section>
+					
+					<h1>E agora?</h1>
+					<ul>
+						<li><a href="http://developer.mozilla.org/">http://developer.mozilla.org/</a></li>
+						<li><a href="http://mozilla.org/aurora">http://mozilla.org/aurora</li>
+					
+					
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
