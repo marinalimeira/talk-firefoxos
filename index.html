@@ -17,11 +17,7 @@
 		<script>
 		
 		// Todo
-		//		- Adicionar Marketplace + própria marketplace
 		//		- IndexedDB
-		//		- Aparelhos com FirefoxOS
-		//		- Links Comunidade
-		
 		
 		</script>
 
@@ -87,6 +83,21 @@
 					
 					<img src="img/fox.png">
 					<h1>Firefox OS</h1>
+
+				</section>
+				
+				<section>
+					
+					<h3>Smartphones Comercializados no Brasil</h3>
+					<img src="img/fireweb.png" style="height:500px;width:auto;">
+					<h1>LG Fireweb</h1>
+
+				</section>
+				
+				<section>
+					
+					<img src="img/alcatel.png" style="height:500px;width:auto;">
+					<h1>Alcatel One Touch Fire</h1>
 
 				</section>
 				
@@ -227,14 +238,88 @@ getphoto.onerror = function () {
 				</section>
 				
 				<section>
+				
+					<h1>Armazenamento</h1>
+					<h3>AppCache</h3>
+					
+					<pre><code data-trim contenteditable>
+					
+&lt;html manifest="meuapp.appcache"&gt;
+  ...
+&lt;/html&gt;
+
+					
+					</code></pre>
+					
+					<pre><code data-trim contenteditable>
+					
+CACHE MANIFEST
+# v1 - 2014-04-10
+# isso é um comentário
+www.example.com/index.html
+www.example.com/*.png
+*.jpg
+*/logo.png
+
+					
+					</code></pre>
+					
+				</section>
+				
+				<section>
+					
+					<h1>Armazenamento</h1>
+					<h3>DOM Storage</h3>
+					
+					<pre><code data-trim contenteditable>
+																
+sessionStorage.setItem("chave", "valor");
+					
+alert(sessionStorage.getItem("chave"));
+				
+// localStorage = Para Sempre
+// sessionStorage = Sessão Atual
+					
+					</code></pre>
+					
+				</section>
+				
+				<section>
+				
+					<h1>Armazenamento</h1>
+					<h3>IndexedDB</h3>
+				
+					<aside class="notes">
+					 - Não tem limite de storage
+					 - Voltado para trabalhar com grande quantidade de dados
+					 - Busca de alta perfomance	
+					</aside>
+				
+				</section>
+				
+				<section>
+					
+					<h3>Firefox</h3><h1>Marketplace</h1>
+					<img src="img/marketplace.png" style="height:550px;width:auto;">
+
+				</section>
+								
+				<section>
 					
 					<h1>E agora?</h1>
 					<ul>
 						<li><a href="http://developer.mozilla.org/">http://developer.mozilla.org/</a></li>
-						<li><a href="http://mozilla.org/aurora">http://mozilla.org/aurora</li>
+						<li><a href="http://mozilla.org/aurora">http://mozilla.org/aurora</a></li>
+					</ul>
+				</section>
+				
+				<section>
 					
+					<h2>Comunidade</h2>
+					<img src="img/logo-comunidade.png">
 					
 				</section>
+
 				
 			</div>
 
