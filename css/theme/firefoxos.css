@@ -279,3 +279,14 @@ blockquote .quotesource {
 	font-size: 20px;
 	text-align: right;
 }
+
+.tag {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-family: "Open Sans ExtraBold", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  font-size:30pt;
+  font-style: italic;
+  line-height:63pt;
+  color: #fff;
+  position: absolute;
+}
